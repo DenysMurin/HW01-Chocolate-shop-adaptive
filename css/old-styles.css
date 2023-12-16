@@ -1,0 +1,546 @@
+:root {
+  --c-brand: #fd9222;
+  --c-primary: #111111;
+  --c-primary-tr: #1111111a;
+  --c-primary-light: #ffffff;
+  --c-primary-light-tr: #ffffffb2;
+  --c-background: #1e1823;
+  --c-background-light: #fafafa;
+}
+/*!Base*/
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--c-primary);
+  background-color: var(--c-background-light);
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+button {
+  font-family: inherit;
+}
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+/* все что сейчас ниже - код для скрітия заголовка визуально */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.section {
+  padding: 64px 0;
+}
+.section-title {
+  color: var(--c-primary);
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.16;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+.container {
+  /* width: 100%; */
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+/*!Header*/
+.header {
+  padding-bottom: 8px;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-grow: 1;
+}
+
+.header-socials {
+  display: flex;
+  gap: 18px;
+}
+.header-socials-link {
+  fill: none;
+  stroke: var(--c-primary);
+  transition: 0.2s;
+}
+.header-socials-link:hover {
+  stroke: var(--c-brand);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--c-primary);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+.logo-accent {
+  font-style: italic;
+}
+.nav-list {
+  display: flex;
+  gap: 24px;
+  flex-grow: 1;
+  justify-content: center;
+}
+.nav-link {
+  display: inline-block;
+  padding: 24px 0;
+  color: var(--c-primary);
+  /* font-size: 14px;не указіваем тк в body есть */
+  font-weight: 500;
+  line-height: 1.143;
+  letter-spacing: -0.02em;
+}
+
+.nav-link:hover {
+  color: var(--c-brand);
+}
+/*!Hero section*/
+.hero-section {
+  padding-bottom: 72px;
+}
+.hero-inner {
+  padding: 380px 40px 40px;
+  background-color: var(--c-background);
+  border-radius: 30px;
+  background-image: url('../Images/hero-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.hero-title {
+  color: var(--c-primary-light);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.214;
+  letter-spacing: -0.03em;
+  margin-bottom: 32px;
+  max-width: 484px;
+}
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.button-primary {
+  font-family: inherit; /* будет наслодовать из body*/
+  background-color: var(--c-brand);
+  color: var(--c-primary-light);
+  cursor: pointer;
+  border: none;
+  padding: 14px 40px;
+  border-radius: 100px;
+  font-weight: 600;
+  line-height: 1.21;
+}
+.button-primary:hover {
+  background-color: #fcf1e0;
+  color: var(--c-brand);
+}
+.hero-button {
+  color: var(--c-primary-light);
+  border: 1px solid currentColor;
+  padding: 14px 40px;
+  border-radius: 100px;
+  font-weight: 600;
+  line-height: 1.21;
+}
+
+.hero-button:hover {
+  color: var(--c-brand);
+}
+
+.hero-arrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-left: auto;
+  color: var(--c-primary-light);
+  font-weight: 500;
+  line-height: 1.28;
+  letter-spacing: -0.03em;
+}
+
+.hero-arrow:hover {
+  color: var(--c-brand);
+}
+.hero-arrow-link {
+  display: flex;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  fill: var(--c-brand);
+  background-color: var(--c-primary-light);
+  border-radius: 50%;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.hero-arrow:hover .hero-arrow-link {
+  fill: var(--c-primary);
+}
+.hero-arrow-link:hover {
+  fill: var(--c-primary);
+}
+/*!Advantages section*/
+.advantage-section {
+  padding: 50px 0;
+  background-color: var(--c-background);
+}
+.advantage-list {
+  display: flex;
+  gap: 72px;
+}
+/*первій вариант */
+/* .advantage-item:first-child,
+.advantage-item:nth-child(2) {
+  padding-right: 18px;
+  border-right: 1px solid var(--c-primary-light-tr);} */
+
+/* второй вариант */
+
+.advantage-item:not(:last-child) {
+  position: relative;
+  padding-right: 18px;
+}
+.advantage-item:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 124px;
+  height: 1px;
+  background-color: var(--c-primary-light-tr);
+  transform: rotate(-90deg) translateX(50%);
+  transform-origin: 100% 0;
+  content: '';
+}
+.advantage-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--c-brand);
+  width: 62px;
+  height: 62px;
+  border: 1px solid var(--c-primary-light-tr);
+  border-radius: 50%;
+  margin-bottom: 22px;
+}
+.advantage-title {
+  color: var(--c-background-light);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.22;
+  margin-bottom: 18px;
+}
+.advantage-text {
+  color: var(--c-primary-light-tr);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.21;
+  letter-spacing: -0.02em;
+}
+
+/*!Ingridients section*/
+.ingridients-subtitle {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.ingridients-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.ingridients-item {
+  flex-basis: calc((100% - 60px) / 4);
+}
+.ingridient {
+  border: 1px solid var(--c-brand);
+  border-radius: 15px;
+  padding: 28px;
+  /* transform: scale(0);
+  transition: transform 2s ease-in, background-color 1s ease-in;
+  background-color: var(--c-brand); */
+}
+/* .ingridient:hover{
+  transform: scale(1.05);   
+  background-color: var(--c-primary);
+} */
+/*!How its made(VIDEO) section*/
+.video-inner {
+  display: flex;
+  gap: 20px;
+}
+.video-media {
+  flex-basis: calc((100% - 20px) / 2);
+}
+.video-background {
+  border-radius: 15px;
+  height: 100%;
+  object-fit: cover;
+}
+.video-play {
+  /* TODO: center play button */
+  display: none;
+}
+.video-content {
+  padding: 32px;
+  border: 1px solid #1e1823;
+  flex-basis: calc((100% - 20px) / 2);
+}
+
+/* !Our products section */
+.product-list {
+  gap: 18px;
+  display: flex;
+}
+.product-item {
+  flex-basis: calc((100%-54) / 4);
+}
+.product-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.product {
+  border: 1px solid var(--c-primary-tr);
+  background-color: var(--c-background-light);
+  padding: 32px 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+.product-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 12px;
+  /* ниже то же , что и инсет
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; */
+  background-color: var(--c-brand);
+  color: var(--c-primary-light);
+  transform: translateY(100%);
+  transition: transform 1s;
+}
+.product:hover .product-overlay {
+  transform: translateY(0);
+}
+
+/* !Reviews section*/
+
+.reviews-list {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 28px;
+}
+.reviews-item {
+  flex-basis: calc((100% - 56px) / 3);
+  /* flex-basis: 100%; */
+  position: relative;
+}
+.review-image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.review {
+  border: 1px solid var(--c-primary-tr);
+  border-radius: 15px;
+  background-color: var(--c-primary-light-tr);
+  box-shadow: 0px 9px 26px 0px rgba(215, 228, 249, 0.25);
+  padding: 56px 24px 42px;
+  text-align: center;
+}
+
+/* !Footer */
+
+/* !Modal */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  /* анимация фона и окна */
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 250ms ease-in-out opacity 250ms ease-in-out;
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 610px;
+  /* 100процентов от высоты экрана */
+  height: 100%;
+  max-height: 1058px;
+  /* позволяет прокручивать, если размер окна меньше */
+  overflow-y: auto;
+  background-color: var(--c-primary-light);
+  border-radius: 15px;
+  padding: 48px;
+  transform: scale(1);
+}
+.backdrop.is-hidden .modal {
+  transform: scale(0);
+}
+.modal-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+.modal-field {
+  margin-bottom: 18px;
+}
+
+.modal-label {
+  /* не задаем, тк указан в боди */
+  /* font-style: 14px; */
+  display: block;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.modal-input {
+  width: 100%;
+  border: 1.5px solid var(--c-primary-tr);
+  border-radius: 13px;
+  background-color: var(--c-background-light);
+  padding: 22px 24px;
+  transition: border-color 250ms;
+}
+
+.modal-input-phone {
+  padding-left: 74px;
+}
+.modal-input:focus,
+.modal-textarea:focus {
+  /* отмена установки браузера */
+  outline: none;
+  border-color: var(--c-brand);
+}
+.modal-input::placeholder,
+.modal-textarea::placeholder {
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: #4040404d;
+}
+
+.modal-input-wrap {
+  position: relative;
+}
+.modal-input-icon {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill 250ms;
+}
+/* этот код, если иконка одноцветная, и будет менять цвет при фокусе
+.modal-input:focus + .modal-input-icon{
+  fill:var(--c-brand) 
+}*/
+.modal-textarea {
+  min-height: 137px;
+  width: 100%;
+  border: 1.5px solid var(--c-primary-tr);
+  border-radius: 13px;
+  background-color: var(--c-background-light);
+  padding: 22px 24px;
+  resize: none;
+  outline: none;
+  transition: border-color 250ms;
+}
+
+.modal-checkbox {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  gap: 20px;
+}
+
+.modal-checkbox-check {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--c-primary);
+  border-radius: 2px;
+}
+
+.modal-checkbox-input:checked + .modal-checkbox-check {
+  background-color: var(--c-brand);
+}
+.modal-button {
+  display: block;
+  margin: 0 auto;
+}

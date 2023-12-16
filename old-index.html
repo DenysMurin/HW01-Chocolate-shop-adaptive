@@ -26,6 +26,7 @@
           <nav class="header-nav">
             <a class="logo" href="./index.html">
               <span class="logo-accent">Simply</span>chocolate
+
               <svg width="24" height="24">
                 <use href="./Images/icons.svg#icon-chocolate"></use>
               </svg>
@@ -38,11 +39,7 @@
               <li><a class="nav-link" href="#">Chocolate is loved</a></li>
             </ul>
           </nav>
-          <button class="mobile-menu-open-btn" type="button">
-            <svg class="mobile-menu-open-btn-icon" width="28" height="28">
-              <use href="./Images/icons.svg#icon-burger"></use>
-            </svg>
-          </button>
+
           <!-- <button class="mobile-open-btn" type="button">
             <svg class="mobile-open-btn-icon" width="28" height="28">
               <use href="./Images/icons.svg#icon-burger"></use>
@@ -67,7 +64,7 @@
     </header>
     <main>
       <!-- Hero section -->
-      <!-- <section class="hero-section">
+      <section class="hero-section">
         <div class="container">
           <div class="hero-inner">
             <h1 class="hero-title">
@@ -90,12 +87,12 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- Advantages section -->
-      <!-- <section id="advantage-section" class="advantage-section">
-        <div class="container"> -->
-      <!-- TODO: hide this title -->
-      <!-- <h2 class="visually-hidden">Our advantages</h2>
+      <section id="advantage-section" class="advantage-section">
+        <div class="container">
+          <!-- TODO: hide this title -->
+          <h2 class="visually-hidden">Our advantages</h2>
           <ul class="advantage-list">
             <li class="advantage-item">
               <div class="advantage-icon">
@@ -143,9 +140,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Ingridients section -->
-      <!-- <section class="section">
+      <section class="section">
         <div class="container">
           <h2 class="section-title">
             It all adds up to one exceptional taste sensation
@@ -200,21 +197,21 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- How its made(VIDEO) section -->
-      <!-- <section class="section">
+      <section class="section">
         <div class="container">
           <h2 class="section-title">How it's made?</h2>
           <div class="video-inner">
-            <div class="video-media"> -->
-      <!-- пример вставки видео, а вообще тут картинка TODO: chenge to video
+            <div class="video-media">
+              <!-- пример вставки видео, а вообще тут картинка TODO: chenge to video
         <video>
           <source src="./videos/chocolate.webp" type="video/webp">
           <source src="./videos/chocolate.mp4" type="video/mp4">
           <p>Browser does not support this video</p>
         </video>
       -->
-      <!-- <img
+              <img
                 class="video-background"
                 src="./Images/video-bg.jpg"
                 alt="video background"
@@ -251,9 +248,9 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- Our products section -->
-      <!-- <section class="section">
+      <section class="section">
         <div class="container">
           <h2 class="section-title">Our products</h2>
           <ul class="product-list">
@@ -351,9 +348,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- section Review -->
-      <!-- <section class="section">
+      <section class="section">
         <div class="container">
           <h2 class="section-title">Chocolate is loved</h2>
           <ul class="reviews-list">
@@ -406,22 +403,22 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
     </main>
     <footer></footer>
 
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-close" data-modal-close>close(X)</button>
         <h2 class="section-title">Buy now</h2>
 
         <form name="contacr-form" autocomplete="off">
           <fieldset>
-            <legend class="modal-label">Personal information</legend> -->
-    <!-- name -->
-    <!-- <div class="modal-field"> -->
-    <!-- class="modal-label" не добавляется потом у что он все равно не виден -->
-    <!-- <label class="visually-hidden" for="user-name">Name</label>
+            <legend class="modal-label">Personal information</legend>
+            <!-- name -->
+            <div class="modal-field">
+              <!-- class="modal-label" не добавляется потом у что он все равно не виден -->
+              <label class="visually-hidden" for="user-name">Name</label>
               <input
                 class="modal-input"
                 id="user-name"
@@ -429,11 +426,11 @@
                 name="user-name"
                 placeholder="name"
               />
-            </div> -->
-    <!-- surname -->
-    <!-- <div class="modal-field"> -->
-    <!-- class="modal-label" не добавляется потом у что он все равно не виден -->
-    <!-- <label class="visually-hidden" for="user-surname">Surname</label>
+            </div>
+            <!-- surname -->
+            <div class="modal-field">
+              <!-- class="modal-label" не добавляется потом у что он все равно не виден -->
+              <label class="visually-hidden" for="user-surname">Surname</label>
               <input
                 class="modal-input"
                 id="user-surname"
@@ -441,10 +438,11 @@
                 name="user-surname"
                 placeholder="surname"
               />
-            </div> -->
-    <!-- email -->
-    <!-- <div class="modal-field">
+            </div>
+            <!-- email -->
+            <div class="modal-field">
               <label class="modal-label" for="user-email">Email</label>
+
               <input
                 class="modal-input"
                 id="user-email"
@@ -452,14 +450,15 @@
                 name="user-email"
                 placeholder="enter your email"
               />
-            </div> -->
-    <!-- phone  -->
-    <!-- <div class="modal-field">
+            </div>
+            <!-- phone  -->
+            <div class="modal-field">
               <label class="modal-label" for="user-tel">Phone number </label>
               <div class="modal-input-wrap">
                 <svg class="modal-input-icon" width="32" height="32">
                   <use href="./Images/icons.svg#icon-Frame"></use>
                 </svg>
+
                 <input
                   class="modal-input modal-input-phone"
                   id="user-tel"
@@ -468,9 +467,9 @@
                   placeholder="Phone number"
                 />
               </div>
-            </div> -->
-    <!-- credit card -->
-    <!-- <div class="modal-field">
+            </div>
+            <!-- credit card -->
+            <div class="modal-field">
               <label class="modal-label" for="user-tel">Card number</label>
               <input
                 class="modal-input"
@@ -481,6 +480,7 @@
               />
             </div>
           </fieldset>
+
           <fieldset>
             <legend class="visually-hidden">additional information</legend>
             <div>
@@ -510,39 +510,8 @@
           </button>
         </form>
       </div>
-    </div> -->
-    <!-- <script>сюда подключается управление открітием и закрітием окна</script> -->
-    <!-- mobile menu -->
-    <div class="mobile-menu-wrapper">
-      <div class="container mobile-menu-container">
-        <button class="mobile-menu-close-btn" type="button">
-          <svg class="mobile-menu-close-icon" width="28" height="28">
-            aria-label="mobile menu close btn"
-            <use href="./Images/icons.svg#icon-close"></use>
-          </svg>
-        </button>
-        <nav class="mobile-menu-navigation">
-          <ul class="mobile-menu">
-            <li class="mobile-menu-item">
-              <a class="mobile-menu-link" href="#">Home</a>
-            </li>
-            <li class="mobile-menu-item">
-              <a class="mobile-menu-link" href="#">How its made</a>
-            </li>
-            <li class="mobile-menu-item">
-              <a class="mobile-menu-link" href="#">Chocolade is loved</a>
-            </li>
-          </ul>
-        </nav>
-        <ul class="mobile-menu-social-list">
-          <li class="mobile-menu-social-list-item">
-            <a href="#" class="mobile-menu-social-list-link"></a>
-          </li>
-          <li class="mobile-menu-social-list-item">
-            <a href="#" class="mobile-menu-social-list-link"></a>
-          </li>
-        </ul>
-      </div>
     </div>
+
+    <!-- <script>сюда подключается управление открітием и закрітием окна</script> -->
   </body>
 </html>
